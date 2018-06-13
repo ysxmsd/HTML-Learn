@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+
+    <button id="comparison">machine stop</button>
+    <p id="c">machine stop</p>
+
+    <script>
+     var button=document.getElementById("comparison");
+     var p=document.getElementById("c");
+
+     button.addEventListener('click',updateBtn);
+
+     function updateBtn(){
+         
+         if(button.textContent==="machine stop"){
+          button.textContent="machine start";
+          p.textContent="machine is stop";
+         }
+        else if (button.textContent==="machine start"){
+         button.textContent="machine stop";
+         p.textContent="machine is start"
+        }}
+    </script>
+</body>
+
+</html>

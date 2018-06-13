@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<html>
+		<meta charset="utf-8"> 
+<head>
+	<title> this is HTML学习第一个网页 </title>
+
+	<style type="text/css"> h1{color:red} </style>
+</head>
+
+  <body>
+	<h1 id="top"> 招聘简介:</h1>
+		<p>
+		 招聘是人力资源战略模块，而非事务性模块
+		</p>
+	
+	<canvas id="canvas" ></canvas>
+
+	<textarea id="textarea"> input code </textarea>
+	<input type="button" id="dreawbutton" value="dd"></input>
+
+	
+
+	
+
+	<script>
+	  var canvas=document.getElementById("canvas");
+	  var ctx=canvas.getContext("2d");
+
+	      ctx.fillStyle = 'green';
+		  ctx.fillRect(10, 10, 100, 100);
+
+	  var textarea=document.getElementById("textarea");
+	      textarea.value="";
+
+	  var dearw=document.getElementById("dreawbutton");
+  
+	  function dreawCanvas(){
+		  ctx.clearRect(10,10,canvas.width, canvas.height);
+		  eval(textarea.value);
+	  }
+
+	  function dreawbuttonclick(){
+		  textarea.focus();
+	  }
+
+	  dreawbutton.addEventListener('click',dreawbuttonclick);
+	  textarea.addEventListener('input',dreawCanvas);
+	 // window.addEventListener('load',dreawCanvas)
+
+	
+	
+	</script>
+
+
+
+
+
+
+	</body>
+	
+</html>
+

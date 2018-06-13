@@ -1,0 +1,174 @@
+<!DOCTYPE HTML>
+<html>
+        <meta charset="utf-8" description="HTML学习" author="HWFENG"> 
+    <head>
+        <title>这是第二页</title>
+        <link href="..\styles\2.css" type="text/css" rel="stylesheet" />
+    </head>
+
+    <body>
+        <h1>CSS演示</h1>
+        <p><a href="..">返回主页</a></p> 
+        <p><a href="http://www.baidu.com" target="_blank">Internet movie Database</a>(open in new window :target="_blank")</p>
+        <p><a href="../1.html#buttom">返回第一页项部:#top</a></p>
+
+        <table>
+            <tr>
+                <th></th>
+                <th scope="col">周一</th>
+                <th scope="col">周二</th>
+                <th scope="col">周三</th>
+                <th scope="col">周四</th>   
+                <th scope="col">周五</th>
+                <th scope="col">周六</th>
+                <th scope="col">周七</th>
+            </tr>
+
+            <tr>
+                <th scope="row">应出勤人数</th>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td>4</td>
+                <td>5</td>
+                <td>6</td>
+                <td>7</td>
+            </tr>
+        </table>
+
+
+        <table border="2" bgcolor="#efefef">
+            <thead>
+                <tr>
+                    <th width="150" bgcolor="#cccccc">Date</th>
+                    <th>income</th>
+                    <th>expenditure</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <th>1st january</th>
+                    <th>250</th>
+                    <th>36</th>
+                </tr>
+
+                <tr>
+                    <th>2nd january</th>
+                    <th>285</th>
+                    <th>48</th>
+                </tr>
+<!-- additional rows as above-->
+
+                <tr>
+                    <th>31st january</th>
+                    <th>129</th>
+                    <th>64</th>
+                </tr>
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td></td>
+                    <td>7824</td>
+                    <td>1241</td>
+                </tr>
+            </tfoot>
+        </table>
+
+        <form action="http://wwww.baidu.com">
+            <p>
+                username:
+                <input type="text" name="username" size=15 maxlength="30" />
+            </p>
+
+            <p>
+                password:
+                <input type="password" name="username" size=15 maxlength="30" />
+            </p>   
+            
+            <p>是否记住密码:</p>
+                <input type="radio" name="issave" value="ture" checked="checked" /> 记住密码
+                <input type="radio" name="issave" value="false"  /> 不记住密码
+
+            <p>登录选项</p>
+                <input type="checkbox" name="logoption" value="savepassword" />保存密码
+                <input type="checkbox" name="logoption" value="autologo" />自动登录
+
+            <p>登录</p>
+            <textarea name="remark" cols="20" rows="4">enter you remark... </textarea>
+
+            <P>从何渠道了解到此网站?</P>
+            <select name="way">
+                <option value="radio">radio</option>
+                <option value="TV">TV</option>
+            </select>
+
+            <p>文件上传:</p>
+            <input type="file" name="user file" /> <br/>
+            <input type="submit" value="upload" />
+            <input type="image" src="../images/zp.jpg" width="50" height="20" />
+        </form>
+
+        <button><img src="../images/zp.jpg" alt="add"  width="50" height="20"> Add </button>
+
+        <fieldset>
+            <legend> contact detail</legend>
+            <label> Email:<br />
+            <input type="text" name="email" /></label><br/>
+            <label>Mobil:<br />
+            <input type="text" name="Mobil"/></label><br/>
+            <label>telephone:<br />
+            <input type="text" name="telephone"/></label>
+        </fieldset>
+
+        <script type="text/javascript">
+            /*
+                *param1 array
+                *param2 array
+                *retrun true or false
+            */
+            function arrayssimilar(arr1,arr2){
+               return(arr1===arr2)
+            }    
+        </script>
+        <script src="../scripts/2.js"></script>
+    </body>
+
+
+    <form action="http://wwww.baidu.com" method="post">
+        <label for="username"> username:</label>
+        <input type="text" name="username" required="required" />
+
+        <label for="username">logo date:</label>
+        <input type="date" name="logodate" />
+
+
+        <p>搜索</p>
+       <!-- <input type="search" name="search" />-->
+
+        <input type="submit" value="Submit" />
+    </form>
+
+<p class="important">以上是HTML5语法222</p>
+<p>以上是<span class="gal"> HTML5 </span>语法</p>
+
+
+<div id="paghead">
+    <img src="..\images\head.png" >
+    <ul>
+        <li><a href="http:\\www.baidu.com" >baidu</a></li>
+        <li><a href="http:\\www.alibaba.com">alibaba</a></li>
+        <li><a href="http:\\www.qq.com">qq</a></li>
+    </ul>
+</div>
+
+<iframe height="450" width="350" src="https://map.baidu.com/"> </iframe>
+
+
+<h1>smokeing</h1>
+<p id="intro">there are <i>dozens</i> of different <b>potato</b> varieties.</p>
+<p>they are usually described as early. second early and maincrop potatoes.</p>
+
+
+</html>

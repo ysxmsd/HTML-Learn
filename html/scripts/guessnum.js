@@ -1,0 +1,84 @@
+//guess num game js 
+
+//加变量保存数据
+var randomNumber=Math.floor(Math.random()*100)+1;
+
+var guesses=document.querySelector('.guesses');
+var lastResult=document.querySelector('.lastResult');
+var lowOrHi=document.querySelector('.lowOrHi');
+
+var guessSubmit=document.querySelector('.guessSubmit');
+var guessfield=document.querySelector('.guessField');
+
+var guessCount=1;
+var resetbutton;
+
+
+//录入数值判断函数
+function checkGuess(){
+    var userGuess=Number(guessfield.value);
+    if (guessCount===1){
+        guesses.textContent='Previous guesses: ';
+    }
+    guesses.textContent+=userGuess;
+
+    if (userGuess===randomNumber){
+        lastResult.textContent='Congratulations! You got it right!';
+        lastResult.style.backgroundColor='green';
+        lowOrHi.textContent='';
+    
+    }
+    else if (guessCount===10){
+        lastResult.textContent='GAME OVER!!!';
+        GameOver();
+    }
+    else{
+        lastResult.textContent='Wrong';
+        lastResult.style.backgroundColor='red';
+
+        if (userGuess>randomNumber){
+            lowOrHi.textContent = 'Last       guess was too high!';
+        }
+        else{
+            lowOrHi.textContent = 'Last        guess was too low!'
+        }
+    }
+    guessCount++;
+    guessfield.value='';
+    guessfield.focus();
+}
+
+
+function GameOver(){
+    guessfield.disabled=true;
+    guessSubmit.disabled=true;
+    resetButton = document.createElement('button');
+    resetButton.textContent = 'Start new game';
+    document.body.appendChild(resetButton);
+    resetButton.addEventListener('click', resetGame);
+}
+
+
+function resetGame() {
+    guessCount = 1;
+  
+    var resetParas = document.querySelectorAll('.resultParas p');
+    for (var i = 0 ; i < resetParas.length ; i++) {
+      resetParas[i].textContent = '';
+    }
+  
+    resetButton.parentNode.removeChild(resetButton);
+  
+    guessField.disabled = false;
+    guessSubmit.disabled = false;
+    guessField.value = '';
+    guessField.focus();
+  
+    lastResult.style.backgroundColor = 'white';
+  
+    randomNumber = Math.floor(Math.random() * 100) + 1;
+  }
+
+guessSubmit.addEventListener('click', checkGuess);
+
+
