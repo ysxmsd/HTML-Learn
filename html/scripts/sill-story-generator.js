@@ -29,8 +29,12 @@ var insertz=[
 
 //randomize.value='FDF';
 //randomize.textContent='fsfsfsf';
-randomize.addEventListener('click', result);
+randomize.addEventListener('click', output);
 
+
+
+
+var i='str';
 
 function result() {
 
@@ -63,7 +67,7 @@ function result() {
 
   nwestore=nwestore.replace('300',temperature);
 
-  var i='str';
+
   var k;
 
   switch(typeof(i)){
@@ -72,9 +76,25 @@ function result() {
     case 'undefined':nwestore='undefined'; break;
   //  default : 'unkonw';break;
   }
-
-
+  myfunction();
+  nwestore=i;
   story.textContent = nwestore;
   story.style.visibility = 'visible';
+
+
 }
 
+
+function myfunction()
+{
+  var myArray=['I','LOVE','YOU'];
+  var madeAString=myArray.join(' ');
+  i=madeAString;
+}
+
+
+function output() {
+  var para = document.createElement('p');
+  document.body.appendChild(para);
+  para.textContent = 'Value: ';
+}
