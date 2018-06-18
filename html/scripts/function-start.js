@@ -4,8 +4,31 @@
     btn.textContent="clcik";
   	document.body.appendChild(btn);
     //btn.addEventListener(onclick,createhtml);
-    btn.onclick=function(){
-    createhtml('woo','warning')};
+    //btn.onclick=function(){createhtml('woo','warning')};
+
+    var btnArray=document.querySelectorAll('button');
+
+    for(var index=0;index<btnArray.length;index++)
+      {
+        switch (index) {
+          case 0:
+              btnArray[index].onclick=function(){
+              createhtml('ERROR','warning')
+            }
+            break;
+
+          case 1:
+            btnArray[index].onclick=function(){
+            createhtml('ok','chat')}
+            break;
+        
+          default:
+            btnArray[index].onclick=createhtml('ok','x')
+            break;
+        }
+
+      }
+ 
 
 
 
@@ -21,7 +44,7 @@
       msg.textContent=msgText;
       panel.appendChild(msg);
 
-      var closeBtn=document.createElement('button');1
+      var closeBtn=document.createElement('button');
       closeBtn.textContent='X';
       panel.appendChild(closeBtn);
 
