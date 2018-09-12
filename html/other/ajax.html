@@ -1,0 +1,78 @@
+<html>
+    <meta charset="utf-8">
+
+    <head>
+            <title>ajax测试</title>
+    </head>
+
+    <body>
+        <h1>ajax测试</h1>
+
+        
+
+        <!--这是固定GET方法-->
+        <a href="http://localhost:8080/JasperReport2/wetTest">wetTest</a>
+        <br>
+        <a href="http://how2j.cn/study/checkName.jsp?name=def">checkName.jsp?name=def</a>
+
+
+
+        <!--这是标准HTML提交表单-->
+        <form action="http://localhost:8080/JasperReport2/ReportHTMLTest">
+ 
+            输入账号 <input name="name" type="text" value="def" >
+             
+            <input type="submit" value="验证账号是否存在">
+             
+            </form>
+
+
+            <!--这是AJAX标准-->
+            <span>输入账号 :</span>
+            <input id="name" name="name" onkeyup="check()" type="text"> 
+            <span id="checkResult"></span>
+
+
+            <!--建立表单，从服务端通过Servlet获取数据过来-->
+
+            <h4>建立表单，从服务端通过Servlet获取数据过来</h4>  
+            <input id="get" name="getdata" value="获取数据" type="button">
+                <table id="tb" border="1">
+                    <tr>
+                    <td>YYMMDD</td>
+                    <td>empno</td>
+                    <td>addWorkTime</td>
+                    <td>billNo</td>
+                    </tr>   
+               </table>
+
+
+            <!--提取表单数据，提交servlet打印报表-->
+
+            <h5>提取表单数据，提交servlet打印报表</h5>
+            
+            <form name="postdata" action="/JasperReport2/overServerServlet" method="post" target="_blank" onsubmit="tbpost()">
+                <textarea id="textjson" name="tbjson"></textarea>
+                <input type="submit" value="提交数据s">
+              </form>
+
+
+
+            
+            <!--
+            <input id="post" name="postdata" action="http://localhost:8080/JasperReport2/overServerServlet" 
+                method="post" target="_blank"value="提交数据2" type="submit" >
+            -->
+            
+            
+
+
+
+
+
+
+
+            <script  src="..\scripts\ajax.js"></script>
+ 
+    </body>
+</html>
